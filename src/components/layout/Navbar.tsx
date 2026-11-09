@@ -44,9 +44,11 @@ export function Navbar() {
           className="group flex items-center gap-2.5 focus:outline-none"
           aria-label="Sarwar Adhikari - Home"
         >
-          <span className="font-mono text-xs font-semibold px-2 py-0.5 rounded bg-sky-500/10 text-sky-400 border border-sky-500/20">
-            SA
-          </span>
+          <img
+            src="/profile.jpg"
+            alt="Sarwar Adhikari"
+            className="w-8 h-8 rounded-full object-cover border border-sky-400/40 shadow-sm shadow-sky-500/20"
+          />
           <div className="flex items-center text-sm font-semibold tracking-tight text-slate-100">
             <span>Sarwar Adhikari</span>
           </div>

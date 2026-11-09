@@ -44,6 +44,7 @@ export interface SiteConfig {
   linkedin: string;
   twitter: string;
   siteUrl: string;
+  avatar?: string;
   education: Education;
   availability: string | null;
   languages: Language[];

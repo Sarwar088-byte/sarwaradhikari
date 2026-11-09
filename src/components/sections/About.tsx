@@ -51,17 +51,44 @@ export function About() {
 
         {/* Narrative & Pillars Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Narrative (Left Column) */}
-          <div className="lg:col-span-6 space-y-5 text-sm sm:text-base text-slate-300 leading-relaxed">
-            <p>
-              I am an undergraduate developer in my second year of Computer Science and Engineering in Nepal. Rather than skimming through superficial hype, I invest my time understanding how software actually works beneath the surface—from memory allocation and pointers in C++ to asymptotic efficiency in data structures.
-            </p>
-            <p>
-              Alongside my studies, serving as an Academic Peer Mentor is one of my most rewarding responsibilities. Teaching introductory programming concepts to first-year engineering students has taught me that true mastery is the ability to explain complex technical concepts simply, patiently, and clearly.
-            </p>
-            <p>
-              My goal is to continue refining my engineering skills through challenging software projects, contributing to open-source tools, and collaborating with motivated teams to build reliable, high-impact technology.
-            </p>
+          {/* Narrative & Profile (Left Column) */}
+          <div className="lg:col-span-6 space-y-6">
+            {/* Profile Intro Badge */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-5 rounded-2xl bg-[#11141c] border border-white/10 shadow-xl">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border-2 border-sky-400/40 shrink-0 shadow-lg shadow-sky-500/10">
+                <img
+                  src="/profile.jpg"
+                  alt="Sarwar Adhikari"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="text-xl font-bold text-white">
+                    Sarwar Adhikari
+                  </h3>
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                </div>
+                <p className="text-xs text-sky-400 font-medium mb-2">
+                  B.Tech CSE Undergraduate &bull; Peer Mentor
+                </p>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Dedicated to foundational computer science, algorithmic mastery, and collaborative academic guidance in Nepal.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+              <p>
+                I am an undergraduate developer in my second year of Computer Science and Engineering in Nepal. Rather than skimming through superficial hype, I invest my time understanding how software actually works beneath the surface—from memory allocation and pointers in C++ to asymptotic efficiency in data structures.
+              </p>
+              <p>
+                Alongside my studies, serving as an Academic Peer Mentor is one of my most rewarding responsibilities. Teaching introductory programming concepts to first-year engineering students has taught me that true mastery is the ability to explain complex technical concepts simply, patiently, and clearly.
+              </p>
+              <p>
+                My goal is to continue refining my engineering skills through challenging software projects, contributing to open-source tools, and collaborating with motivated teams to build reliable, high-impact technology.
+              </p>
+            </div>
 
             {/* Quick Badges */}
             <div className="pt-3 flex flex-wrap gap-2">

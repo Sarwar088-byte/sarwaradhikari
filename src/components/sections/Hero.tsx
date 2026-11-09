@@ -14,10 +14,19 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Main Editorial Left Column */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium mb-6">
-              <span className="w-2 h-2 rounded-full bg-sky-400" />
-              <span>Second-Year B.Tech CSE &bull; Peer Mentor &bull; Nepal</span>
+            {/* Profile Avatar & Status Pill */}
+            <div className="flex flex-wrap items-center gap-3.5 mb-6">
+              <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full overflow-hidden border-2 border-sky-400/50 shadow-md shadow-sky-500/20 shrink-0">
+                <img
+                  src="/profile.jpg"
+                  alt="Sarwar Adhikari"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Second-Year B.Tech CSE &bull; Peer Mentor &bull; Nepal</span>
+              </div>
             </div>
 
             {/* Headline */}

@@ -17,6 +17,7 @@ export const siteConfig: SiteConfig = {
   linkedin: "",
   twitter: "",
   siteUrl: "https://sarwarahikari.pages.dev",
+  avatar: "/profile.jpg",
   education: {
     degree: "B.Tech Computer Science and Engineering",
     year: "Second Year Undergraduate",
