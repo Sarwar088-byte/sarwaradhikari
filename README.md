@@ -155,3 +155,4 @@ export const projects: Project[] = [
 
 ## ✦ License
 Created for Sarwar Adhikari. All digital rights reserved.
+
