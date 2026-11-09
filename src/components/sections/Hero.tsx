@@ -1,6 +1,6 @@
 import React from "react";
 import { siteConfig } from "@/data/site";
-import { ArrowUpRight, FolderGit2, Mail, MapPin, GraduationCap, Users } from "lucide-react";
+import { ArrowUpRight, FolderGit2, Mail, MapPin, GraduationCap } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
 
 export function Hero() {
@@ -17,7 +17,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-3.5 mb-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Second-Year B.Tech CSE &bull; Peer Mentor &bull; Nepal</span>
+                <span>Third-Year B.Tech CSE &bull; Nepal</span>
               </div>
             </div>
 
@@ -101,8 +101,7 @@ export function Hero() {
                   </div>
 
                   <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 text-[11px] text-slate-400 font-mono">
-                    <span className="flex items-center gap-1"><GraduationCap className="w-3 h-3 text-sky-400" /> B.Tech CSE · Y2</span>
-                    <span className="flex items-center gap-1"><Users className="w-3 h-3 text-sky-400" /> Peer Mentor</span>
+                    <span className="flex items-center gap-1"><GraduationCap className="w-3 h-3 text-sky-400" /> B.Tech CSE · Y3</span>
                     <span className="flex items-center gap-1"><MapPin className="w-3 h-3 text-sky-400" /> Nepal</span>
                   </div>
                 </div>
