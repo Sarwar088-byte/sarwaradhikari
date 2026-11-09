@@ -13,10 +13,10 @@ export const siteConfig: SiteConfig = {
     "I am a second-year Computer Science and Engineering student with a strong interest in technology, programming, and innovation. I enjoy exploring programming concepts, developing my technical foundations, and understanding how software can solve real-world problems. With an interest in Python, C++, and application software, I am continuously learning and looking for opportunities to turn ideas into meaningful technology.",
   location: "Nepal",
   email: "",
-  github: "",
+  github: "https://github.com/Sarwar088-byte",
   linkedin: "",
   twitter: "",
-  siteUrl: "",
+  siteUrl: "https://sarwarahikari.pages.dev",
   education: {
     degree: "B.Tech Computer Science and Engineering",
     year: "Second Year",
