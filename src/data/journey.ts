@@ -1,74 +1,69 @@
 import { JourneyMilestone } from "@/types";
 
-// ============================================================================
-// Journey Milestones
-// Stage-based milestones reflecting Sarwar's academic and personal growth
-// ============================================================================
-
 export const journeyMilestones: JourneyMilestone[] = [
   {
     id: "btech-cse",
     type: "current",
-    title: "B.Tech Computer Science & Engineering",
-    subtitle: "Second Year Student",
+    title: "B.Tech in Computer Science and Engineering",
+    subtitle: "Second Year Undergraduate",
     description:
-      "Currently pursuing a B.Tech in Computer Science and Engineering, exploring CS fundamentals, building programming skills, and developing a strong technical foundation for a career in technology.",
+      "Deepening computer science foundations with rigorous coursework in Data Structures, Object-Oriented Programming, Discrete Mathematics, and Relational Database Systems.",
     details: [
-      "Studying core CS subjects including data structures and algorithms",
-      "Developing proficiency in C++ and Python",
-      "Engaging with practical software and database concepts",
+      "Implementing foundational data structures and algorithmic solutions in C++",
+      "Analyzing algorithm time and space complexities (Big-O notation)",
+      "Designing relational schemas and writing structured SQL queries",
     ],
   },
   {
     id: "peer-mentor",
     type: "role",
-    title: "Peer Mentor",
-    subtitle: "Guiding Fellow Students",
+    title: "Academic Peer Mentor",
+    subtitle: "University Peer Mentorship Program",
     description:
-      "Serving as a peer mentor, supporting and guiding fellow students through academic challenges, fostering collaboration, and contributing to a positive learning environment.",
+      "Selected to mentor first-year engineering undergraduates, facilitating weekly discussions, debugging assistance, and conceptual guidance in introductory programming.",
     details: [
-      "Helping peers understand complex technical concepts",
-      "Encouraging collaborative learning and knowledge sharing",
-      "Developing leadership and communication skills",
+      "Guided junior students through C/C++ programming concepts and logic development",
+      "Held one-on-one debugging sessions to teach systematic problem isolation",
+      "Fostered collaborative study environments to improve student retention and confidence",
     ],
   },
   {
-    id: "programming-foundations",
+    id: "systems-software",
     type: "foundation",
-    title: "Programming Foundations",
-    subtitle: "C++ & Python",
+    title: "Programming & Systems Mastery",
+    subtitle: "C++ & Python Core Competencies",
     description:
-      "Building a solid programming foundation through hands-on practice in C++ and Python, focusing on problem-solving, logical thinking, and writing clean, structured code.",
+      "Focused deliberate practice on low-level memory concepts in C++ (pointers, memory lifecycle, STL) combined with rapid prototyping and automation scripting in Python.",
     details: [
-      "Learning object-oriented programming principles",
-      "Practicing algorithmic problem-solving",
-      "Exploring scripting and automation with Python",
+      "Engineered command-line utilities and custom data container implementations",
+      "Explored file I/O serialization and robust error handling patterns",
+      "Built habits of clean code formatting, modularity, and readable documentation",
     ],
   },
   {
-    id: "core-cs-concepts",
+    id: "web-software",
     type: "learning",
-    title: "Core CS Concepts",
-    subtitle: "Data Structures, SQL & Application Software",
+    title: "Practical Software & Web Engineering",
+    subtitle: "JavTech Project & Deployment Pipelines",
     description:
-      "Deepening understanding of essential computer science concepts including data structures, SQL-based database management, and application software design principles.",
+      "Translating academic theory into practical, user-facing applications. Engineered responsive web interfaces with semantic HTML, modern CSS, and cloud edge deployment.",
     details: [
-      "Studying arrays, linked lists, stacks, queues, and trees",
-      "Learning relational database design and SQL queries",
-      "Understanding application software architecture and usage",
+      "Built and deployed the JavTech digital platform using Cloudflare Pages",
+      "Adopted Git and GitHub for disciplined commit history and version tracking",
+      "Explored cross-device responsive layout standards and accessibility best practices",
     ],
   },
   {
-    id: "game-dev-innovation",
+    id: "creative-computing",
     type: "interest",
-    title: "Game Development & Innovation",
-    subtitle: "Creative Technology & Software Concepts",
+    title: "Interactive Systems & Creative Computing",
+    subtitle: "Game Mechanics & Future Exploration",
     description:
-      "Exploring game development and creative technology as avenues for innovation, combining programming skills with imagination to build interactive and engaging software experiences.",
+      "Exploring the engineering behind real-time interactive media, game loops, and simulation physics to bridge computational rigor with creative user experiences.",
     details: [
-      "Investigating game engines and development frameworks",
-      "Combining coding skills with creative design thinking",
-      "Exploring how technology can drive novel software ideas",
+      "Prototyping 2D game loops and bounding-box collision detection",
+      "Investigating state machine architecture for interactive simulations",
+      "Staying curious about modern software paradigms and emerging technology",
     ],
   },
 ];

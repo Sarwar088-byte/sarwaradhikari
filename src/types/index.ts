@@ -56,7 +56,9 @@ export type SkillCategoryId =
   | "programming"
   | "computer-science"
   | "software-database"
-  | "complementary";
+  | "complementary"
+  | "tooling"
+  | "mentorship";
 
 /** Individual skill entry */
 export interface Skill {
@@ -93,7 +95,7 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
-  status: "completed" | "in-progress" | "concept";
+  status: "completed" | "in-progress" | "concept" | "Active" | "Completed";
   highlights?: string[];
 }
 

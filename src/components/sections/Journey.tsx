@@ -1,17 +1,6 @@
-"use client";
-
 import React from "react";
 import { journeyMilestones } from "@/data/journey";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  Users,
-  Code2,
-  Database,
-  Gamepad2,
-  Sparkles,
-} from "lucide-react";
+import { GraduationCap, Users, Code2, Database, Sparkles, Check } from "lucide-react";
 
 export function Journey() {
   const getMilestoneIcon = (type: string) => {
@@ -24,92 +13,77 @@ export function Journey() {
         return Code2;
       case "learning":
         return Database;
-      case "interest":
-        return Gamepad2;
       default:
         return Sparkles;
     }
   };
 
   return (
-    <section id="journey" className="py-28 relative border-t border-[rgba(255,255,255,0.06)]">
-      <div className="max-w-[1360px] mx-auto px-6 md:px-12">
-        <SectionHeading
-          number="05"
-          title="THE JOURNEY SO FAR"
-          description="Stage-based milestones in academic progression, mentorship, and technical curiosity."
-        />
+    <section id="journey" className="py-24 md:py-32 border-b border-white/5 bg-[#0d1017]">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="mb-14">
+          <span className="text-xs font-semibold uppercase tracking-wider text-sky-400 block mb-2">
+            Progression &amp; Milestones
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Education &amp; Experience
+          </h2>
+          <p className="text-base text-slate-400 mt-2 max-w-2xl">
+            Key academic milestones, leadership roles, and technical growth stages that shape my engineering trajectory.
+          </p>
+        </div>
 
-        <div className="relative mt-16 max-w-4xl mx-auto">
-          {/* Central Vertical Timeline Spine */}
-          <div className="absolute top-0 bottom-0 left-4 sm:left-1/2 -translate-x-1/2 w-[2px] bg-gradient-to-b from-[#67E3F5]/40 via-[rgba(255,255,255,0.1)] to-transparent pointer-events-none" />
+        {/* Timeline Stack */}
+        <div className="space-y-6 max-w-3xl">
+          {journeyMilestones.map((milestone, idx) => {
+            const Icon = getMilestoneIcon(milestone.type);
+            return (
+              <div
+                key={milestone.id}
+                className="p-6 sm:p-7 rounded-2xl bg-[#11141c] border border-white/10 flex flex-col sm:flex-row gap-5 items-start"
+              >
+                {/* Icon badge */}
+                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center shrink-0">
+                  <Icon className="w-5 h-5" />
+                </div>
 
-          <div className="space-y-12 sm:space-y-16">
-            {journeyMilestones.map((milestone, idx) => {
-              const Icon = getMilestoneIcon(milestone.type);
-              const isEven = idx % 2 === 0;
-
-              return (
-                <motion.div
-                  key={milestone.id}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className={`relative flex flex-col sm:flex-row items-start ${
-                    isEven ? "sm:flex-row-reverse" : ""
-                  } gap-6 sm:gap-12 pl-12 sm:pl-0`}
-                >
-                  {/* Central Node Badge */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-0 z-20 flex items-center justify-center">
-                    <div className="w-8 h-8 rounded-full bg-[#0D1118] border-2 border-[#67E3F5] flex items-center justify-center shadow-[0_0_15px_rgba(103,227,245,0.3)]">
-                      <Icon className="w-4 h-4 text-[#67E3F5]" />
-                    </div>
-                  </div>
-
-                  {/* Content Card (Left or Right on desktop) */}
-                  <div
-                    className={`w-full sm:w-[calc(50%-2rem)] p-6 sm:p-7 rounded-2xl bg-[#0D1118]/80 border border-[rgba(255,255,255,0.08)] hover:border-[rgba(103,227,245,0.3)] transition-all duration-300 relative group`}
-                  >
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="font-mono text-xs uppercase tracking-widest text-[#67E3F5]">
-                        {"// STAGE 0"}{idx + 1}
-                      </span>
-                      <span className="font-mono text-[10px] text-[#707C8C] uppercase tracking-wider px-2 py-0.5 rounded bg-[#131923] border border-[rgba(255,255,255,0.05)]">
-                        {milestone.type}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-bold text-[#F4F6FA] mb-1 group-hover:text-white transition-colors">
+                {/* Content */}
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-1.5">
+                    <h3 className="text-lg font-bold text-white">
                       {milestone.title}
                     </h3>
-
-                    <div className="text-xs font-mono text-[#9582FF] mb-4">
-                      {milestone.subtitle}
-                    </div>
-
-                    <p className="text-sm text-[#A4ADBA] leading-relaxed mb-5">
-                      {milestone.description}
-                    </p>
-
-                    {milestone.details && (
-                      <div className="pt-4 border-t border-[rgba(255,255,255,0.05)] space-y-2">
-                        {milestone.details.map((detail, dIdx) => (
-                          <div
-                            key={dIdx}
-                            className="flex items-start gap-2 text-xs text-[#707C8C] leading-snug"
-                          >
-                            <span className="text-[#67E3F5] text-xs leading-tight">&bull;</span>
-                            <span>{detail}</span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
+                    <span className="text-xs font-mono text-sky-400 px-2 py-0.5 rounded bg-sky-500/10">
+                      Phase 0{idx + 1}
+                    </span>
                   </div>
-                </motion.div>
-              );
-            })}
-          </div>
+
+                  <div className="text-xs font-medium text-slate-400 mb-3">
+                    {milestone.subtitle}
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                    {milestone.description}
+                  </p>
+
+                  {milestone.details && (
+                    <div className="space-y-1.5 pt-3 border-t border-white/5">
+                      {milestone.details.map((detail, dIdx) => (
+                        <div
+                          key={dIdx}
+                          className="flex items-start gap-2 text-xs text-slate-400"
+                        >
+                          <Check className="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0" />
+                          <span>{detail}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

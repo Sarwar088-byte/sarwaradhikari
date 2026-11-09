@@ -1,153 +1,137 @@
-"use client";
-
 import React from "react";
 import { siteConfig } from "@/data/site";
-import { HeroVisual } from "@/components/visual/HeroVisual";
-import { ArrowDown, ArrowUpRight, Compass, Terminal } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowUpRight, Code2, GraduationCap, Users, MapPin, Mail, FolderGit2 } from "lucide-react";
+import { GithubIcon } from "@/components/ui/Icons";
 
 export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden"
+      className="relative pt-36 pb-20 md:pt-44 md:pb-28 border-b border-white/5"
     >
-      {/* Background radial lighting */}
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(103,227,245,0.08)_0%,transparent_70%)] blur-3xl pointer-events-none" />
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Main Editorial Left Column */}
+          <div className="lg:col-span-7 flex flex-col items-start">
+            {/* Status Pill */}
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-medium mb-6">
+              <span className="w-2 h-2 rounded-full bg-sky-400" />
+              <span>Second-Year B.Tech CSE &bull; Peer Mentor &bull; Nepal</span>
+            </div>
 
-      <div className="max-w-[1360px] w-full mx-auto px-6 md:px-12 flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Editorial Identity & Typography */}
-          <div className="lg:col-span-7 flex flex-col items-start z-10">
-            {/* System Status / Introductory Label */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-[#0D1118] border border-[rgba(255,255,255,0.08)] mb-6 shadow-sm"
-            >
-              <Terminal className="w-3.5 h-3.5 text-[#67E3F5]" />
-              <span className="font-mono text-xs uppercase tracking-widest text-[#A4ADBA]">
-                HELLO, WORLD. I&apos;M
-              </span>
-              <span className="w-1 h-3 bg-[#67E3F5] animate-pulse" />
-            </motion.div>
+            {/* Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.08] mb-6">
+              Hi, I&apos;m Sarwar Adhikari.
+            </h1>
 
-            {/* Signature Name Display Typography */}
-            <motion.div
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-4"
-            >
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#F4F6FA] leading-[0.95] uppercase">
-                Sarwar
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F6FA] via-[#67E3F5] to-[#9582FF]">
-                  Adhikari
-                </span>
-              </h1>
-            </motion.div>
-
-            {/* Supporting Role Identity */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs sm:text-sm tracking-wider text-[#67E3F5] font-medium uppercase mb-6"
-            >
-              <span>{siteConfig.role}</span>
-              <span className="text-[rgba(255,255,255,0.2)]">&bull;</span>
-              <span className="text-[#9582FF]">{siteConfig.secondaryRole}</span>
-              <span className="text-[rgba(255,255,255,0.2)]">&bull;</span>
-              <span className="text-[#A4ADBA]">Technology Enthusiast</span>
-            </motion.div>
-
-            {/* Core Manifesto Statement */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg sm:text-xl md:text-2xl font-light text-[#F4F6FA] leading-snug mb-4 max-w-2xl"
-            >
-              &ldquo;{siteConfig.tagline}&rdquo;
-            </motion.p>
+            {/* Tagline / Mission */}
+            <p className="text-lg sm:text-xl text-slate-200 font-normal leading-relaxed mb-4 max-w-xl">
+              Building solid foundations in software engineering, algorithms, and application development.
+            </p>
 
             {/* Narrative Paragraph */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-sm sm:text-base text-[#A4ADBA] leading-relaxed max-w-xl mb-8 font-normal"
-            >
-              {siteConfig.description}
-            </motion.p>
+            <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-8 max-w-xl">
+              I am a Computer Science & Engineering undergraduate passionate about C++, Python, and core computing principles. Through academic coursework, hands-on projects, and mentoring fellow engineering students, I strive to write clean, purposeful code that solves real problems.
+            </p>
 
-            {/* Call to Actions & Location Microcopy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto"
-            >
+            {/* Primary Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3">
               <a
-                href="#expertise"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#67E3F5] text-[#07090D] font-mono text-xs uppercase tracking-wider font-semibold transition-all duration-200 hover:bg-[#88e8f8] hover:shadow-[0_0_25px_rgba(103,227,245,0.4)]"
+                href="#projects"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-sky-400 hover:bg-sky-300 text-slate-950 font-semibold text-xs tracking-wider uppercase transition-colors"
               >
-                <span>Explore Technical Focus</span>
-                <Compass className="w-4 h-4" />
+                <span>View Selected Projects</span>
+                <FolderGit2 className="w-4 h-4" />
               </a>
 
               <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#0D1118] text-[#F4F6FA] border border-[rgba(255,255,255,0.12)] font-mono text-xs uppercase tracking-wider font-medium hover:border-[rgba(103,227,245,0.4)] hover:text-[#67E3F5] transition-all duration-200"
+                href="mailto:sarwar31111@gmail.com"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#141923] hover:bg-[#1a2130] text-slate-200 border border-white/10 text-xs tracking-wider uppercase font-medium transition-colors"
               >
-                <span>Get in Touch</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <Mail className="w-4 h-4 text-sky-400" />
+                <span>Get In Touch</span>
               </a>
 
-              <div className="flex items-center gap-2 text-xs font-mono text-[#707C8C] pl-2 sm:pl-4 sm:border-l sm:border-[rgba(255,255,255,0.1)] py-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#67E3F5]" />
-                <span>Based in {siteConfig.location}</span>
-              </div>
-            </motion.div>
+              <a
+                href={siteConfig.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-lg bg-[#141923] hover:bg-[#1a2130] text-slate-300 border border-white/10 text-xs tracking-wider font-medium transition-colors"
+                aria-label="GitHub Profile"
+              >
+                <GithubIcon className="w-4 h-4" />
+                <span>GitHub</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+              </a>
+            </div>
           </div>
 
-          {/* Right Column: Signature Geometric Orbital Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            className="lg:col-span-5 flex items-center justify-center"
-          >
-            <HeroVisual />
-          </motion.div>
+          {/* Profile Overview Card (Right Column) */}
+          <div className="lg:col-span-5">
+            <div className="rounded-2xl bg-[#11141c] border border-white/10 p-6 sm:p-7 shadow-xl">
+              <div className="flex items-center justify-between pb-5 border-b border-white/10 mb-5">
+                <div>
+                  <h3 className="text-base font-bold text-white">Profile Overview</h3>
+                  <p className="text-xs text-slate-400">Academic & Technical Focus</p>
+                </div>
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Active
+                </span>
+              </div>
+
+              {/* Data Rows */}
+              <div className="space-y-4 text-xs">
+                <div className="flex items-start gap-3 py-2 border-b border-white/5">
+                  <GraduationCap className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" />
+                  <div>
+                    <div className="text-slate-400">Academics</div>
+                    <div className="text-slate-100 font-medium">B.Tech Computer Science &amp; Engineering</div>
+                    <div className="text-slate-400 text-[11px]">Second Year Undergraduate</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 py-2 border-b border-white/5">
+                  <Users className="w-4 h-4 text-indigo-400 mt-0.5 shrink-0" />
+                  <div>
+                    <div className="text-slate-400">Leadership Role</div>
+                    <div className="text-slate-100 font-medium">Academic Peer Mentor</div>
+                    <div className="text-slate-400 text-[11px]">Guiding junior students in programming</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 py-2 border-b border-white/5">
+                  <Code2 className="w-4 h-4 text-sky-400 mt-0.5 shrink-0" />
+                  <div>
+                    <div className="text-slate-400">Core Technical Stack</div>
+                    <div className="text-slate-100 font-medium">C++, Python, SQL, HTML/CSS</div>
+                    <div className="text-slate-400 text-[11px]">Data Structures &amp; Relational DBMS</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 py-2">
+                  <MapPin className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
+                  <div>
+                    <div className="text-slate-400">Location</div>
+                    <div className="text-slate-100 font-medium">Nepal</div>
+                    <div className="text-slate-400 text-[11px]">Available for remote &amp; local opportunities</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Footer */}
+              <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
+                <span>Contact:</span>
+                <a
+                  href="mailto:sarwar31111@gmail.com"
+                  className="text-sky-400 hover:underline font-mono"
+                >
+                  sarwar31111@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Refined Scroll Prompt */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="max-w-[1360px] mx-auto px-6 md:px-12 w-full pt-12 flex items-center justify-between text-xs font-mono text-[#707C8C]"
-      >
-        <div className="flex items-center gap-2">
-          <span className="text-[#67E3F5]">SYS.STATUS:</span>
-          <span className="text-[#F4F6FA]">ONLINE // READY</span>
-        </div>
-
-        <a
-          href="#intro"
-          className="group flex items-center gap-2 hover:text-[#67E3F5] transition-colors cursor-pointer"
-          aria-label="Scroll to next section"
-        >
-          <span className="tracking-widest uppercase">DISCOVER PROFILE</span>
-          <div className="w-7 h-7 rounded-full border border-[rgba(255,255,255,0.1)] group-hover:border-[#67E3F5] flex items-center justify-center transition-colors">
-            <ArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
-          </div>
-        </a>
-      </motion.div>
     </section>
   );
 }

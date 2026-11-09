@@ -1,129 +1,99 @@
-"use client";
-
 import React from "react";
-import { SectionHeading } from "@/components/ui/SectionHeading";
-import { motion } from "framer-motion";
-import { Languages as LanguagesIcon, Sparkles, Gamepad2, Code, Laptop, Lightbulb } from "lucide-react";
+import { siteConfig } from "@/data/site";
+import { Globe, Lightbulb, Code2, Gamepad2, Layers, Cpu } from "lucide-react";
 
 export function Languages() {
-  const languageCards = [
-    { name: "English", script: "Global Lingua Franca", code: "ENG" },
-    { name: "Nepali", script: "नेपाली", code: "NEP" },
-    { name: "Hindi", script: "हिन्दी", code: "HIN" },
-    { name: "Maithili", script: "मैथिली", code: "MAI" },
-  ];
-
-  const interestCards = [
+  const interests = [
     {
-      title: "Coding & Programming",
-      detail: "Algorithmic thinking, clean code habits, and iterative problem solving.",
-      icon: Code,
+      title: "Systems & Algorithms",
+      description: "Low-level memory efficiency, algorithmic problem solving, and computational limits.",
+      icon: Code2,
     },
     {
-      title: "Game Development",
-      detail: "Real-time interactive mechanics, physics simulations, and engine pipelines.",
+      title: "Interactive Game Engines",
+      description: "Exploring 2D game loops, physics simulations, collision algorithms, and rendering.",
       icon: Gamepad2,
     },
     {
-      title: "Exploring Application Software",
-      detail: "Dissecting user flows, system responsiveness, and real-world software architectures.",
-      icon: Laptop,
+      title: "Application Architecture",
+      description: "Translating real-world user workflows into structured, relational, maintainable software.",
+      icon: Layers,
     },
     {
-      title: "Learning Technology Concepts",
-      detail: "Staying inquisitive about emerging computing paradigms and digital innovation.",
-      icon: Lightbulb,
+      title: "Emerging Technologies",
+      description: "Keeping pace with modern tools, cloud deployment pipelines, and computing innovations.",
+      icon: Cpu,
     },
   ];
 
   return (
-    <section id="languages" className="py-28 relative border-t border-[rgba(255,255,255,0.06)]">
-      <div className="max-w-[1360px] mx-auto px-6 md:px-12">
-        <SectionHeading
-          number="06"
-          title="BEYOND THE CODE"
-          description="Linguistic capabilities and technical interests shaping personal worldview."
-        />
+    <section className="py-24 md:py-32 border-b border-white/5">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Header */}
+        <div className="mb-14">
+          <span className="text-xs font-semibold uppercase tracking-wider text-sky-400 block mb-2">
+            Communication &amp; Pursuits
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            Languages &amp; Interests
+          </h2>
+          <p className="text-base text-slate-400 mt-2 max-w-2xl">
+            Linguistic fluency for international collaboration and creative technical interests outside structured coursework.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mt-12">
-          {/* Left Column: Linguistic Repertoire */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#67E3F5]">
-              <LanguagesIcon className="w-4 h-4" />
-              <span>COMMUNICATION // LANGUAGES</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          {/* Spoken Languages (Left Column) */}
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-2 mb-4 text-xs font-semibold uppercase tracking-wider text-slate-300">
+              <Globe className="w-4 h-4 text-sky-400" />
+              <span>Spoken Languages</span>
             </div>
 
-            <p className="text-sm text-[#A4ADBA] leading-relaxed">
-              Multilingual fluency allows me to bridge diverse cultural communities and communicate effectively across regional and international teams.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              {languageCards.map((lang, idx) => (
-                <motion.div
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {siteConfig.languages.map((lang) => (
+                <div
                   key={lang.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: idx * 0.08 }}
-                  className="p-5 rounded-xl bg-[#0D1118] border border-[rgba(255,255,255,0.08)] hover:border-[rgba(103,227,245,0.3)] transition-all duration-300"
+                  className="p-4 rounded-xl bg-[#11141c] border border-white/10"
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] text-[#67E3F5] uppercase tracking-wider">
-                      {lang.code}
-                    </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#67E3F5]" />
-                  </div>
-                  <div className="text-lg font-bold text-[#F4F6FA] mb-1">
+                  <div className="text-base font-bold text-white mb-1">
                     {lang.name}
                   </div>
-                  <div className="text-xs font-mono text-[#707C8C]">
-                    {lang.script}
+                  <div className="text-xs text-slate-400">
+                    {lang.note}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Right Column: Creative & Technical Interests */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-[#9582FF]">
-              <Sparkles className="w-4 h-4" />
-              <span>INQUIRY // INTERESTS</span>
+          {/* Technical Pursuits (Right Column) */}
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-2 mb-4 text-xs font-semibold uppercase tracking-wider text-slate-300">
+              <Lightbulb className="w-4 h-4 text-indigo-400" />
+              <span>Technical &amp; Creative Interests</span>
             </div>
 
-            <p className="text-sm text-[#A4ADBA] leading-relaxed">
-              Interests that fuel my curiosity beyond structured classroom syllabi, pushing me into practical creative programming and game systems.
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {interestCards.map((interest, idx) => {
-                const Icon = interest.icon;
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              {interests.map((item) => {
+                const Icon = item.icon;
                 return (
-                  <motion.div
-                    key={interest.title}
-                    initial={{ opacity: 0, y: 15 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: idx * 0.1 }}
-                    className="group p-5 rounded-xl bg-[#0D1118] border border-[rgba(255,255,255,0.08)] hover:border-[rgba(149,130,255,0.35)] transition-all duration-300 flex flex-col justify-between"
+                  <div
+                    key={item.title}
+                    className="p-4 rounded-xl bg-[#11141c] border border-white/10"
                   >
-                    <div>
-                      <div className="p-2.5 rounded-lg bg-[#131923] border border-[rgba(255,255,255,0.06)] text-[#9582FF] w-fit mb-4 group-hover:scale-105 transition-transform">
-                        <Icon className="w-4 h-4" />
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center">
+                        <Icon className="w-3.5 h-3.5" />
                       </div>
-                      <div className="text-base font-bold text-[#F4F6FA] mb-2 tracking-tight group-hover:text-white transition-colors">
-                        {interest.title}
-                      </div>
-                      <p className="text-xs text-[#A4ADBA] leading-relaxed">
-                        {interest.detail}
-                      </p>
+                      <h3 className="text-sm font-bold text-white">
+                        {item.title}
+                      </h3>
                     </div>
-
-                    <div className="mt-4 pt-3 border-t border-[rgba(255,255,255,0.04)] font-mono text-[10px] text-[#707C8C] flex justify-between">
-                      <span>ENGAGEMENT</span>
-                      <span className="text-[#9582FF]">CONTINUOUS</span>
-                    </div>
-                  </motion.div>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 );
               })}
             </div>
