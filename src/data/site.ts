@@ -4,14 +4,14 @@ export const siteConfig: SiteConfig = {
   name: "Sarwar Adhikari",
   shortName: "SA",
   role: "Computer Science & Engineering Student",
-  secondaryRole: "Peer Mentor",
+  secondaryRole: "CS Student",
   tagline:
     "Building solid foundations in software engineering, algorithms, and application development.",
   description:
-    "Second-year Computer Science and Engineering undergraduate and Peer Mentor based in Nepal. Focused on C++, Python, Data Structures & Algorithms, and building clean, reliable software.",
+    "Third-year Computer Science and Engineering undergraduate based in Janakpurdham, Nepal. Focused on C++, Python, Data Structures & Algorithms, and building clean, reliable software.",
   fullBio:
-    "I am a second-year Computer Science and Engineering student with a strong passion for programming, software engineering principles, and technology innovation. My core focus is on mastering foundational computer science concepts—data structures, algorithms, object-oriented programming, and database systems. As a Peer Mentor, I guide fellow students through programming fundamentals and collaborative problem solving.",
-  location: "Nepal",
+    "I am a third-year Computer Science and Engineering student with a strong passion for programming, software engineering principles, and technology innovation. My core focus is on mastering foundational computer science concepts—data structures, algorithms, object-oriented programming, and database systems.",
+  location: "Kshireshwarnath-1, Dhanusha, Janakpurdham, Nepal",
   email: "sarwar31111@gmail.com",
   github: "https://github.com/Sarwar088-byte",
   linkedin: "",
@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   avatar: "/profile.jpg",
   education: {
     degree: "B.Tech Computer Science and Engineering",
-    year: "Second Year Undergraduate",
+    year: "Third Year Undergraduate",
     institution: "University Engineering Program",
   },
   availability: "Open to Internships & Collaborative Projects",
@@ -33,8 +33,8 @@ export const siteConfig: SiteConfig = {
   interests: [
     "Systems & Application Programming",
     "Data Structures & Algorithms",
-    "Game Mechanics & Interactive Computing",
-    "Peer Mentorship & Collaborative Learning",
+    "Software Architecture & Design",
+    "Full-Stack Engineering & Cloud Systems",
   ],
   navItems: [
     { label: "Home", href: "/#home" },

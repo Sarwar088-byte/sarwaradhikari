@@ -1,5 +1,5 @@
 import React from "react";
-import { BookOpen, Code2, Database, Users, CheckCircle2 } from "lucide-react";
+import { BookOpen, Code2, Database, Layers, CheckCircle2 } from "lucide-react";
 
 export function About() {
   const pillars = [
@@ -25,11 +25,11 @@ export function About() {
       icon: Database,
     },
     {
-      title: "Peer Mentorship & Communication",
-      subtitle: "Collaborative Leadership",
+      title: "Clean Code & Architecture",
+      subtitle: "Scalable Engineering",
       description:
-        "Helping junior engineering students debug logic and master programming basics, reinforcing my own understanding through active teaching.",
-      icon: Users,
+        "Writing modular, maintainable, and robust software adhering to modern design patterns, structured testing, and clean development workflows.",
+      icon: Layers,
     },
   ];
 
@@ -70,20 +70,20 @@ export function About() {
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 </div>
                 <p className="text-xs text-sky-400 font-medium mb-2">
-                  B.Tech CSE Undergraduate &bull; Peer Mentor
+                  Third-Year B.Tech CSE Undergraduate &bull; Nepal
                 </p>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Dedicated to foundational computer science, algorithmic mastery, and collaborative academic guidance in Nepal.
+                  Dedicated to foundational computer science, algorithmic mastery, and high-impact software engineering in Janakpurdham, Nepal.
                 </p>
               </div>
             </div>
 
             <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
               <p>
-                I am an undergraduate developer in my second year of Computer Science and Engineering in Nepal. Rather than skimming through superficial hype, I invest my time understanding how software actually works beneath the surface—from memory allocation and pointers in C++ to asymptotic efficiency in data structures.
+                I am an undergraduate developer in my third year of Computer Science and Engineering based in Kshireshwarnath-1, Dhanusha, Janakpurdham, Nepal. Rather than skimming through superficial hype, I invest my time understanding how software actually works beneath the surface—from memory allocation and pointers in C++ to asymptotic efficiency in data structures.
               </p>
               <p>
-                Alongside my studies, serving as an Academic Peer Mentor is one of my most rewarding responsibilities. Teaching introductory programming concepts to first-year engineering students has taught me that true mastery is the ability to explain complex technical concepts simply, patiently, and clearly.
+                Alongside my studies, I focus on building real-world projects and mastering modern engineering workflows. Tackling complex algorithms and practical software development has taught me that true engineering mastery is the ability to write reliable, clean code, design scalable architectures, and systematically debug intricate systems.
               </p>
               <p>
                 My goal is to continue refining my engineering skills through challenging software projects, contributing to open-source tools, and collaborating with motivated teams to build reliable, high-impact technology.
@@ -93,12 +93,11 @@ export function About() {
             {/* Quick Badges */}
             <div className="pt-3 flex flex-wrap gap-2">
               {[
-                "B.Tech CSE (Year 2)",
-                "Peer Mentor",
+                "B.Tech CSE (Year 3)",
                 "C++ & Python",
                 "Data Structures",
                 "SQL & Relational DBMS",
-                "Nepal",
+                "Janakpurdham, Nepal",
               ].map((badge) => (
                 <span
                   key={badge}

@@ -5,9 +5,9 @@ export const journeyMilestones: JourneyMilestone[] = [
     id: "btech-cse",
     type: "current",
     title: "B.Tech in Computer Science and Engineering",
-    subtitle: "Second Year Undergraduate",
+    subtitle: "Third Year Undergraduate",
     description:
-      "Deepening computer science foundations with rigorous coursework in Data Structures, Object-Oriented Programming, Discrete Mathematics, and Relational Database Systems.",
+      "Deepening computer science foundations with coursework in Data Structures, Algorithms, Software Engineering, Discrete Mathematics, and Relational Database Systems.",
     details: [
       "Implementing foundational data structures and algorithmic solutions in C++",
       "Analyzing algorithm time and space complexities (Big-O notation)",
@@ -15,16 +15,16 @@ export const journeyMilestones: JourneyMilestone[] = [
     ],
   },
   {
-    id: "peer-mentor",
+    id: "software-engineering",
     type: "role",
-    title: "Academic Peer Mentor",
-    subtitle: "University Peer Mentorship Program",
+    title: "Software Engineering & Systems Architecture",
+    subtitle: "Hands-on Development & Problem Solving",
     description:
-      "Selected to mentor first-year engineering undergraduates, facilitating weekly discussions, debugging assistance, and conceptual guidance in introductory programming.",
+      "Designing and implementing modular software applications, focusing on robust logic, optimized algorithms, and clean architecture.",
     details: [
-      "Guided junior students through C/C++ programming concepts and logic development",
-      "Held one-on-one debugging sessions to teach systematic problem isolation",
-      "Fostered collaborative study environments to improve student retention and confidence",
+      "Engineered systems and full-stack utilities with C++, Python, and modern web tooling",
+      "Applied structured testing, profiling, and debugging to eliminate bottlenecks",
+      "Built production-ready deployments with automated pipelines and version control",
     ],
   },
   {

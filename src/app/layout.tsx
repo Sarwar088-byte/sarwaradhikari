@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   keywords: [
     "Sarwar Adhikari",
     "Computer Science Student",
-    "Peer Mentor",
     "Software Development",
     "Nepal Developer",
     "C++",
@@ -62,7 +61,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Sarwar Adhikari",
-    jobTitle: "Computer Science and Engineering Student & Peer Mentor",
+    jobTitle: "Computer Science and Engineering Student",
     nationality: "Nepali",
     knowsLanguage: ["English", "Nepali", "Hindi", "Maithili"],
     alumniOf: {

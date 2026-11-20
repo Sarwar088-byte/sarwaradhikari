@@ -89,21 +89,21 @@ const toolingSkills: Skill[] = [
 
 const mentorshipSkills: Skill[] = [
   {
-    name: "Academic Peer Mentorship",
+    name: "Software Architecture & Design",
     category: "mentorship",
-    description: "Guiding first-year engineering students through programming concepts, debugging, and academic growth.",
-    level: "Active Role",
+    description: "Designing modular, testable, and maintainable software systems and clean APIs.",
+    level: "Proficient",
   },
   {
     name: "Technical Communication",
     category: "mentorship",
-    description: "Breaking down complex computing concepts into clear, actionable explanations.",
+    description: "Breaking down complex computing concepts into clear, actionable technical specifications.",
     level: "Proficient",
   },
   {
     name: "Collaborative Problem Solving",
     category: "mentorship",
-    description: "Working effectively with peers to debug logic errors and architect shared project solutions.",
+    description: "Working effectively with engineering teams to debug complex logic and architect shared solutions.",
     level: "Proficient",
   },
 ];
@@ -129,8 +129,8 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: "mentorship",
-    label: "Mentorship & Collaboration",
-    description: "Leadership, communication, and peer teaching abilities.",
+    label: "Engineering & Collaboration",
+    description: "Architecture, technical communication, and collaborative development abilities.",
     skills: mentorshipSkills,
   },
 ];

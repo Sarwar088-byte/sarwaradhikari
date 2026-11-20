@@ -111,8 +111,8 @@ export function Contact() {
               </div>
               <div>
                 <div className="text-xs text-slate-400">Location</div>
-                <div className="text-sm font-bold text-white">Nepal</div>
-                <div className="text-xs text-slate-400">Timezone: UTC+5:45 (Nepal Standard Time)</div>
+                <div className="text-sm font-bold text-white">Janakpurdham, Nepal</div>
+                <div className="text-xs text-slate-400">Kshireshwarnath-1, Dhanusha · UTC+5:45</div>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ export function Footer() {
               <span className="text-sm font-bold text-white">Sarwar Adhikari</span>
             </div>
             <p className="text-xs text-slate-400 max-w-sm">
-              Second-Year Computer Science &amp; Engineering Student &bull; Peer Mentor &bull; Nepal
+              Third-Year Computer Science &amp; Engineering Student &bull; Janakpurdham, Nepal
             </p>
           </div>
 

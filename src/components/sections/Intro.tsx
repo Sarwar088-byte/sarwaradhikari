@@ -7,14 +7,14 @@ export function Intro() {
     {
       title: "Undergraduate Degree",
       value: "B.Tech in CSE",
-      description: "Second year of computer science & engineering studies.",
+      description: "Third year of computer science & engineering studies.",
       icon: GraduationCap,
     },
     {
-      title: "Mentorship",
-      value: "Peer Mentor",
-      description: "Guiding fellow students through programming and logic concepts.",
-      icon: Users,
+      title: "Current Focus",
+      value: "Software & Systems",
+      description: "Building scalable applications, clean architectures, and modern web solutions.",
+      icon: Terminal,
     },
     {
       title: "Core Technologies",
@@ -24,8 +24,8 @@ export function Intro() {
     },
     {
       title: "Based In",
-      value: siteConfig.location,
-      description: "Open to remote internships and engineering collaboration.",
+      value: "Janakpurdham, Nepal",
+      description: "Kshireshwarnath-1, Dhanusha · Open to remote opportunities.",
       icon: MapPin,
     },
   ];

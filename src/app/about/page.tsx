@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 
 export const metadata = {
   title: "About | Sarwar Adhikari",
-  description: "Learn more about Sarwar Adhikari, B.Tech CSE student and Peer Mentor.",
+  description: "Learn more about Sarwar Adhikari, Third-Year B.Tech CSE student based in Kshireshwarnath-1, Dhanusha, Janakpurdham, Nepal.",
 };
 
 export default function AboutPage() {
