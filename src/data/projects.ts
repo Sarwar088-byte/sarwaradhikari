@@ -2,6 +2,31 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "javtech-infosys",
+    title: "JavTech Infosys — Web Experience Platform",
+    description:
+      "A modern, responsive multi-page web platform engineered for JavTech Infosys, featuring digital services showcase, clean UI/UX design, and fast edge performance.",
+    longDescription:
+      "Designed and deployed to provide a fast, elegant digital presence. Features mobile-first responsive architecture, semantic HTML5 structure, modular styling, intuitive navigation, and multi-page routing for services, company background, and client inquiries.",
+    techStack: [
+      { name: "HTML5" },
+      { name: "CSS3" },
+      { name: "JavaScript" },
+      { name: "Responsive UI" },
+      { name: "Cloudflare Pages" },
+    ],
+    category: "Web Engineering",
+    githubUrl: "https://github.com/Sarwar088-byte/javtech",
+    liveUrl: "https://javtech-project.pages.dev/",
+    featured: true,
+    status: "Completed",
+    highlights: [
+      "Live multi-page production deployment on Cloudflare Pages (javtech-project.pages.dev)",
+      "100% responsive layouts with mobile hamburger navigation and clean typography",
+      "Semantic markup, fast load performance, and accessibility-first design",
+    ],
+  },
+  {
     id: "cpp-dsa-toolkit",
     title: "C++ Data Structures & Algorithms Toolkit",
     description:
@@ -45,30 +70,6 @@ export const projects: Project[] = [
       "Full CRUD lifecycle with relational querying and indexing",
       "Input sanitization preventing edge-case data invalidation",
       "Modular architecture separating storage logic from presentation",
-    ],
-  },
-  {
-    id: "javtech-platform",
-    title: "JavTech Responsive Web Platform",
-    description:
-      "A modern, high-performance responsive web portal engineered with semantic HTML5, modular CSS, and accessible interface design.",
-    longDescription:
-      "Designed and deployed to provide a clean digital presence with fast load speeds, cross-browser compatibility, and mobile-first responsive layout without heavy framework overhead.",
-    techStack: [
-      { name: "HTML5" },
-      { name: "CSS3" },
-      { name: "JavaScript" },
-      { name: "Cloudflare Pages" },
-    ],
-    category: "Web Engineering",
-    githubUrl: "https://github.com/Sarwar088-byte/javtech",
-    liveUrl: "https://sarwarahikari.pages.dev",
-    featured: true,
-    status: "Completed",
-    highlights: [
-      "Sub-second load times with pure vanilla web technologies",
-      "100% responsive grid and flexbox layout across mobile, tablet, and desktop",
-      "WCAG accessibility standards with semantic structure and keyboard navigation",
     ],
   },
   {
